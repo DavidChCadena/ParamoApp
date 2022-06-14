@@ -1,0 +1,30 @@
+<div>
+    <h1 mat-dialog-title>Proyecto</h1>
+    <div mat-dialog-content>
+        <div style="display: flex;flex-direction: column; margin:1rem auto; max-width: 600px; padding: 1rem;">
+                <p>
+                    <mat-form-field >
+                        <textarea matInput placeholder="Nombre" style="line-height: 20px !important" [(ngModel)]="data.nombre_usuario"></textarea>
+                    </mat-form-field>
+                    <mat-form-field >
+                        <textarea matInput placeholder="Apellido" style="line-height: 20px !important" [(ngModel)]="data.apellido"></textarea>
+                    </mat-form-field>
+                    <label>Tipo de proyecto</label>
+                    <select name="miselect" [(ngModel)]="data.estado"  >
+                        <option [value]="item" *ngFor="let item of lista" >{{item}}</option>
+                    </select>
+                    <mat-form-field >
+                        <textarea matInput placeholder="Telefono" style="line-height: 20px !important" [(ngModel)]="data.telefono"></textarea>
+                    </mat-form-field>
+                    <mat-form-field >
+                        <textarea matInput placeholder="Correo" style="line-height: 20px !important" [(ngModel)]="data.correo"></textarea>
+                    </mat-form-field>
+                </p>
+                    
+        </div>
+    </div>
+    <div mat-dialog-actions>
+        <button mat-button (click)="cancelar()">Cancelar</button>
+        <button mat-button [mat-dialog-close]="data" cdkFocusInitial>Confirmar</button>
+    </div>
+</div>

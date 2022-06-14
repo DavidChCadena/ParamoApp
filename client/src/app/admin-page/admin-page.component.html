@@ -1,0 +1,69 @@
+<app-admin-header>
+
+</app-admin-header>
+
+
+<div class="row justify-content-center">
+  <div class="col-md-5 text-center mb-6">
+    <h2 class="heading-section">PRODUCCIONES PÁRAMO  PROYECTOS</h2>
+  </div>
+</div>
+
+<table mat-table [dataSource]="datos" class="mat-elevation-z8" #tabla1>
+
+    <ng-container matColumnDef="Codigo">
+      <th mat-header-cell *matHeaderCellDef> Código </th>
+      <td mat-cell *matCellDef="let articulo"> {{articulo.ID_PRUECTOS}} </td>
+    </ng-container>
+  
+    <ng-container matColumnDef="Nombre">
+      <th mat-header-cell *matHeaderCellDef> Nombre </th>
+      <td mat-cell *matCellDef="let articulo"> {{articulo.nombre_usuario}} </td>
+    </ng-container>
+  
+    <ng-container matColumnDef="Apellido">
+      <th mat-header-cell *matHeaderCellDef> Apellido </th>
+      <td mat-cell *matCellDef="let articulo"> {{articulo.apellido}} </td>
+    </ng-container>
+    
+    <ng-container matColumnDef="Proyecto">
+      <th mat-header-cell *matHeaderCellDef> Proyecto </th>
+      <td mat-cell *matCellDef="let articulo"> {{articulo.nombre_producto}} </td>
+    </ng-container>
+  
+    <ng-container matColumnDef="Telefono">
+      <th mat-header-cell *matHeaderCellDef> Telefono </th>
+      <td mat-cell *matCellDef="let articulo"> {{articulo.telefono}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="Correo">
+      <th mat-header-cell *matHeaderCellDef> Correo </th>
+      <td mat-cell *matCellDef="let articulo"> {{articulo.correo}} </td>
+    </ng-container>
+  
+    <ng-container matColumnDef="Estado">
+      <th mat-header-cell *matHeaderCellDef> Estado </th>
+      <td mat-cell *matCellDef="let articulo"> {{articulo.estado}} </td>
+    </ng-container>
+  
+    <ng-container matColumnDef="Acciones">
+      <th mat-header-cell *matHeaderCellDef> Acciones </th>
+      <td mat-cell *matCellDef="let j = index;">
+        <button mat-raised-button color="OK" focusable="false" (click)="abrirDialogo(j)">
+          Cambiar estado
+        </button>
+        <button mat-raised-button color="warn" focusable="false" (click)="editarProyecto(j)" >
+          Editar proyecto
+        </button>
+      </td>
+    </ng-container>
+  
+    <tr mat-header-row *matHeaderRowDef="columnas"></tr>
+    <tr mat-row *matRowDef="let row; columns: columnas;"></tr>
+  </table>
+  <div class="contenedor">
+  </div>
+  
+  
+  <br>
+  <br>

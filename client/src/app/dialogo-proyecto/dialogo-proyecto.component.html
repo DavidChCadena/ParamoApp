@@ -1,0 +1,20 @@
+
+<div>
+    <h1 mat-dialog-title>Proyecto</h1>
+    <div mat-dialog-content>
+        <div style="display: flex;flex-direction: column; margin:1rem auto; max-width: 600px; padding: 1rem;">
+                <p>
+                    <select class="buttondesplegable" name="miselect" [(ngModel)]="data.estado"  >
+                    <option [value]="item" *ngFor="let item of lista" >{{item}}</option>
+                    </select>
+                    </p>
+                    <mat-form-field >
+                        <textarea class="textArea" matInput placeholder="Observaciones" style="line-height: 20px !important" [(ngModel)]="data.anotation"></textarea>
+                    </mat-form-field>
+        </div>
+    </div>
+    <div mat-dialog-actions>
+        <button class="button" mat-button (click)="cancelar()">Cancelar</button>
+        <button class="button" mat-button [mat-dialog-close]="data" cdkFocusInitial>Confirmar</button>
+    </div>
+</div>

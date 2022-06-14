@@ -1,0 +1,29 @@
+<ng-container>
+    <div id="ABC" class="container"> 
+        <div  class="card mt-4">
+          <div  class="card-body ">
+            <div  id="contact" class="card-title">
+              Contactanos
+            </div>
+            <!-- <form> -->
+            <div  class="form-group">
+              <input type="text" [(ngModel)]="selectedContact.firstName" placeholder="Nombre de contacto" class="form-control mt-2" required>
+            </div>
+            <div class="form-group">
+              <input type="text" [(ngModel)]="selectedContact.lastName" placeholder="Apellido de contacto" class="form-control mt-2" required>
+            </div>
+            <div class="form-group">
+              <input type="email" [(ngModel)]="selectedContact.email" placeholder="Correo" class="form-control mt-2" required>
+            </div>
+            <div class="form-group">
+                <input type="email" [(ngModel)]="selectedContact.phone" placeholder="Telefono" class="form-control mt-2" required>
+              </div>
+
+            <button (click)="saveContact()" class="btn btn-primary mt-2">
+              Contactar
+            </button>
+          <!-- </form> -->
+          </div>
+        </div>
+    </div>  
+</ng-container>

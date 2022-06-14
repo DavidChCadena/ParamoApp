@@ -1,0 +1,47 @@
+
+<a routerLink="/Cabañas" routerLinkActive="active"> Inicio </a>
+
+
+<head>
+  <!-- Design by foolishdeveloper.com -->
+   
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600&display=swap" rel="stylesheet">
+    <!--Stylesheet-->
+    
+</head>
+<body>
+    <div class="background">
+        <div class="shape"></div>
+        <div class="shape"></div>
+    </div>
+    <form>
+        <h3>Inicia sesión</h3>
+
+        <label for="username">Username</label>
+        <input
+        type="email"
+        [(ngModel)]="email"
+        name="email"
+        placeholder="User"
+        required="required"
+        id="username"
+      />
+       
+
+        <label for="password">Password</label>
+        <input
+        type="password"
+        [(ngModel)]="password"
+        name="password"
+        placeholder="Password"
+        required="required"
+        id="password"
+      />
+        
+
+        <button  type="submit" routerLink="/Proyects" routerLinkActive="active" (click)="login()" >Log In</button>
+        
+    </form>
+</body>

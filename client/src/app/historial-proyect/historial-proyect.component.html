@@ -1,0 +1,56 @@
+<app-admin-header>
+
+</app-admin-header>
+
+
+<div class="row justify-content-center">
+    <div class="col-md-5 text-center mb-6">
+      <h2 class="heading-section">PRODUCCIONES PÁRAMO  PROYECTOS HISTORIAL </h2>
+    </div>
+  </div>
+  
+  <table mat-table [dataSource]="datos" class="mat-elevation-z8" #tabla1>
+  
+      <ng-container matColumnDef="Codigo">
+        <th mat-header-cell *matHeaderCellDef> Código </th>
+        <td mat-cell *matCellDef="let articulo"> {{articulo.ID_HISTORIAL}} </td>
+      </ng-container>
+    
+      <ng-container matColumnDef="Nombre">
+        <th mat-header-cell *matHeaderCellDef> Nombre </th>
+        <td mat-cell *matCellDef="let articulo"> {{articulo.nombre_usuario}} </td>
+      </ng-container>
+    
+      <ng-container matColumnDef="Proyecto">
+        <th mat-header-cell *matHeaderCellDef> Proyecto </th>
+        <td mat-cell *matCellDef="let articulo"> {{articulo.ID_PRUECTOS}} </td>
+      </ng-container>
+      
+      <ng-container matColumnDef="Fecha">
+        <th mat-header-cell *matHeaderCellDef> Fecha </th>
+        <td mat-cell *matCellDef="let articulo"> {{articulo.FECHA}} </td>
+      </ng-container>
+    
+      <ng-container matColumnDef="EstadoInicial">
+        <th mat-header-cell *matHeaderCellDef> Estado inicial </th>
+        <td mat-cell *matCellDef="let articulo"> {{articulo.estado_inicial}} </td>
+      </ng-container>
+  
+      <ng-container matColumnDef="EstadoFinal">
+        <th mat-header-cell *matHeaderCellDef> Estado final </th>
+        <td mat-cell *matCellDef="let articulo"> {{articulo.estado_final}} </td>
+      </ng-container>
+    
+    
+      
+    
+      <tr mat-header-row *matHeaderRowDef="columnas"></tr>
+      <tr mat-row *matRowDef="let row; columns: columnas;"></tr>
+    </table>
+    <div class="contenedor">
+    </div>
+    
+    
+    <br>
+    <br>
+  
